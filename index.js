@@ -2,7 +2,6 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
-const generatMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 const questions = () => {
@@ -135,4 +134,9 @@ questions()
     .then(readmeData => {
         console.log('responses', readmeData);
         return generateMarkdown(readmeData);
-    });
+    })
+    .then(markdownFile => {
+        console.log('markdown file: ', markdownFile);
+        writeToFile('README.md', markdownFile);
+    })
+    .catch(err => console.log('Error', err));
