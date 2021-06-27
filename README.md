@@ -1,39 +1,43 @@
 # readme-generator
 
     ## Description
-    Simple node.js application to auto generate professional readme files.
+    Simple node.js application designed to automatically generate a professional looking README.md file using the inquirer package. This is designed to demonstrate the capabilities of javascript to interact with both the file system and the user to generate content.
 
     ## Table of Contents
-    * [Installation] (#installation)
-    * [Usage] (#usage)
-
-        * [License](#License)
-        
-    * [Contributing] (#credits)
-    * [Testing] (#testing)
-    * [Questions] (#Questions)
+    * [Installation](#installation)
+    * [Usage](#usage)
+* [License](#License)
+    * [Contributing](#credits)
+    * [Testing](#testing)
+    * [Questions](#Questions)
     
     ## Installation
-    make sure node.js is installed, download source files, from the root directory of source files run "node index.js".
+    1. Verify that node.js is installed 2. clone the source files 3. install the inquirer package
 
     ## Usage
-    Use to generate professional looking readme.md files.
+    1. Run the application from the root directory of the source files using "node index.js", screenshots provided in ./assets/images.
 
-    
-        ## License
-        ![![License Badge](https://img.shields.io/badge/license-Mozilla%20Public%20License%202.0-brightgreen)]()
+    #### Usage Screenshots:
+    ![Prompt Questions](./assets/images/prompt.jpg)
+    ![Sample README.md](./assets/images/prompt.jpg)
 
-        [![License Badge](https://img.shields.io/badge/license-Mozilla%20Public%20License%202.0-brightgreen)]([Mozilla Public License](https://choosealicense.com/licenses/mpl-2.0/))
+    ## License
+        ![License Badge](https://img.shields.io/badge/license-MIT-brightgreen)
         
+        [MIT](https://choosealicense.com/licenses/mit/)
 
     ## Contributing
-    undefined
+    To contribute to this project please review the Contributor Covenant Code of Conduct:
+    [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct/code_of_conduct.md)
 
     ## Testing
-    download source files, verify node.js is installed.
+    There is a second file created called testIndex.js. Run this file using "node testIndex.js" and a sample of the README.md file will be logged to the console.
 
     ## Questions
-    undefined
+    Please direct all questions to Jamie Vesterfelt:
+    Email: jamievesterfelt@hotmail.com
+    GitHub: jvesterfelt
+    Repository: https://github.com/jvesterfelt/readme-generator
 
 
     Copyright (c) 2021 Jamie Vesterfelt

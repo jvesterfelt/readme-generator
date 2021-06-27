@@ -143,6 +143,6 @@ questions()
     })
     .then(markdownFile => {
         console.log('markdown file: ', markdownFile);
-        writeToFile(markdownFile);
+        writeToFile("README.md", markdownFile);
     })
     .catch(err => console.log('Error', err));
