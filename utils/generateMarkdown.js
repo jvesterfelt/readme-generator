@@ -61,45 +61,18 @@ const renderLicenseSection = (badgeUrl, licenseLink) => {
 
 // TODO: Create a function to generate markdown for README
 const generateMarkdown = (readmeData) => {
-    return `# ${readmeData.project}
+    return `\n# ${readmeData.project}
+    \n## Description\n${readmeData.description}
+    \n## Table of Contents\n* [Installation](#Installation)\n* [Usage](#Usage)${renderLicenseLink(readmeData.license)}\n* [Contributing](#Contributing)\n* [Testing](#Testing)\n* [Questions](#Questions)    
+    \n## Installation\n${readmeData.installation}
+    \n## Usage\n${readmeData.usage}
+    \n#### Usage Screenshots:\n![Prompt Questions](./assets/images/prompt.jpg)\n\n![Sample README.md](./assets/images/prompt.jpg)
+    \n${renderLicenseBadge(readmeData.license)}
+    \n## Contributing\nBefore contributing to this project please review the Contributor Covenant Code of Conduct:\n[Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct/code_of_conduct.md)
+    \n## Testing\n${readmeData.testing}
+    \n## Questions\nPlease direct all questions to Jamie Vesterfelt:\nEmail: ${readmeData.email}\nGitHub: ${readmeData.username}\nRepository: ${readmeData.repository}
 
-    ## Description
-    ${readmeData.description}
-
-    ## Table of Contents
-    * [Installation](#installation)
-    * [Usage](#usage)${renderLicenseLink(readmeData.license)}
-    * [Contributing](#credits)
-    * [Testing](#testing)
-    * [Questions](#Questions)
-    
-    ## Installation
-    ${readmeData.installation}
-
-    ## Usage
-    ${readmeData.usage}
-
-    #### Usage Screenshots:
-    ![Prompt Questions](./assets/images/prompt.jpg)
-    ![Sample README.md](./assets/images/prompt.jpg)
-
-    ${renderLicenseBadge(readmeData.license)}
-
-    ## Contributing
-    To contribute to this project please review the Contributor Covenant Code of Conduct:
-    [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct/code_of_conduct.md)
-
-    ## Testing
-    ${readmeData.testing}
-
-    ## Questions
-    Please direct all questions to Jamie Vesterfelt:
-    Email: ${readmeData.email}
-    GitHub: ${readmeData.username}
-    Repository: ${readmeData.repository}
-
-
-    Copyright (c) 2021 ${readmeData.name}
+    \nCopyright (c) 2021 ${readmeData.name}\n
 `;
 }
 
