@@ -20,12 +20,11 @@ Run the application from the root directory of the source files using "node inde
     
 #### Usage Screenshots:
 ![Prompt Questions](./assets/images/prompt.jpg)
-
-![Sample README.md](./assets/images/readme-sample.jpg)
     
 
 ## License
 ![License Badge](https://img.shields.io/badge/license-MIT-brightgreen)
+
 [MIT](https://choosealicense.com/licenses/mit/)
     
 ## Contributing
@@ -42,5 +41,5 @@ GitHub: jvesterfelt
 Repository: https://github.com/jvesterfelt/readme-generator
 
     
-Copyright (c) 2021 Jamie
+Copyright (c) 2021 Jamie Vesterfelt
 

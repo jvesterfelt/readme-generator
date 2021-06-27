@@ -12,7 +12,7 @@ const createTestReadme = () => {
         project: 'readme-generator',
         repository: 'https://github.com/jvesterfelt/readme-generator',
         description: 'Simple node.js application designed to automatically generate a professional looking README.md file using the inquirer package. This is designed to demonstrate the capabilities of javascript to interact with both the file system and the user to generate content.',
-        installation: '1. Verify that node.js is installed\n2. clone the source files\n3. install the inquirer package',
+        installation: '1. Verify that node.js is installed 2. clone the source files 3. install the inquirer package',
         usage: 'Run the application from the root directory of the source files using "node index.js", screenshots provided in ./assets/images.',
         confirmLicense: true,
         license: 'MIT',
