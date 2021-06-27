@@ -73,6 +73,7 @@ const generateMarkdown = (readmeData) => {
     \nGitHub: ${readmeData.username}
     \nRepository: ${readmeData.repository}
 
+    
     \nCopyright (c) 2021 ${readmeData.name}\n
 `;
 }
