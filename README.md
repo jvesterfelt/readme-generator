@@ -32,7 +32,7 @@ Before contributing to this project please review the Contributor Covenant Code 
 [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct/code_of_conduct.md)
     
 ## Testing
-There is a second file created called testIndex.js. Run this file using "node testIndex.js" and a sample of the README.md file will be logged to the console.
+There is a second script file created called testIndex.js. Run this file using "node testIndex.js" and a sample of the README.md file will be logged to the console.
     
 ## Questions
     
@@ -40,10 +40,11 @@ Please direct all questions to Jamie Vesterfelt:
     
 Email: jamievesterfelt@hotmail.com
     
-GitHub: jvesterfelt
+GitHub: https://github.com/jvesterfelt
     
 Repository: https://github.com/jvesterfelt/readme-generator
 
+    
     
 Copyright (c) 2021 Jamie Vesterfelt
 
