@@ -49,10 +49,7 @@ const renderLicenseLink = (license) => {
 // If there is no license, return an empty string
 const renderLicenseSection = (badgeUrl, licenseLink) => {
     if (badgeUrl) {
-        return `## License
-        ${badgeUrl}
-        
-        ${licenseLink}`;
+        return `\n## License\n${badgeUrl}\n${licenseLink}`;
     } else {
         return '';
     }
@@ -61,12 +58,12 @@ const renderLicenseSection = (badgeUrl, licenseLink) => {
 
 // TODO: Create a function to generate markdown for README
 const generateMarkdown = (readmeData) => {
-    return `\n# ${readmeData.project}
+    return `\n# ${readmeData.project.toUpperCase()}
     \n## Description\n${readmeData.description}
     \n## Table of Contents\n* [Installation](#Installation)\n* [Usage](#Usage)${renderLicenseLink(readmeData.license)}\n* [Contributing](#Contributing)\n* [Testing](#Testing)\n* [Questions](#Questions)    
     \n## Installation\n${readmeData.installation}
     \n## Usage\n${readmeData.usage}
-    \n#### Usage Screenshots:\n![Prompt Questions](./assets/images/prompt.jpg)\n\n![Sample README.md](./assets/images/prompt.jpg)
+    \n#### Usage Screenshots:\n![Prompt Questions](./assets/images/prompt.jpg)\n\n![Sample README.md](./assets/images/readme-sample.jpg)
     \n${renderLicenseBadge(readmeData.license)}
     \n## Contributing\nBefore contributing to this project please review the Contributor Covenant Code of Conduct:\n[Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct/code_of_conduct.md)
     \n## Testing\n${readmeData.testing}

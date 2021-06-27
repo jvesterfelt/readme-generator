@@ -13,7 +13,7 @@ Simple node.js application designed to automatically generate a professional loo
 * [Questions](#Questions)    
     
 ## Installation
-1. Verify that node.js is installed\n2. clone the source files\n3. install the inquirer package
+1. Verify that node.js is installed 2. clone the source files 3. install the inquirer package
     
 ## Usage
 Run the application from the root directory of the source files using "node index.js", screenshots provided in ./assets/images.
@@ -21,12 +21,12 @@ Run the application from the root directory of the source files using "node inde
 #### Usage Screenshots:
 ![Prompt Questions](./assets/images/prompt.jpg)
 
-![Sample README.md](./assets/images/prompt.jpg)
+![Sample README.md](./assets/images/readme-sample.jpg)
     
+
 ## License
-        ![License Badge](https://img.shields.io/badge/license-MIT-brightgreen)
-        
-        [MIT](https://choosealicense.com/licenses/mit/)
+![License Badge](https://img.shields.io/badge/license-MIT-brightgreen)
+[MIT](https://choosealicense.com/licenses/mit/)
     
 ## Contributing
 Before contributing to this project please review the Contributor Covenant Code of Conduct:
@@ -42,5 +42,5 @@ GitHub: jvesterfelt
 Repository: https://github.com/jvesterfelt/readme-generator
 
     
-Copyright (c) 2021 Jamie Vesterfelt
+Copyright (c) 2021 Jamie
 
