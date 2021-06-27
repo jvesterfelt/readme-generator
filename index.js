@@ -2,13 +2,25 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
-const generatMarkdown = require('./utils/generateMarkdown');
+
+// Array for testing:
+const testReadmeDataArr = [{
+    name: 'jvesterfelt',
+    email: 'jamievesterfelt@hotmail.com',
+    username: 'jvesterfelt',
+    project: 'readme-generator',
+    repository: 'https://github.com/jvesterfelt/readme-generator',
+    description: 'Simple node.js application designed to automatically generate a professional looking README.md file using the inquirer package. This is designed to demonstrate the capabilities of javascript to interact with both the file system and the user to generate content.',
+    installation: '1. Verify that node.js is installed 2. clone the source files 3. install the inquirer package',
+    usage: '1. Run the application from the root directory of the source files using "node index.js", screenshots provided in ./assets/images.',
+    confirmLicense: true,
+    license: 'MIT',
+    testing: 'There is a second file created called testIndex.js. Run this file using "node testIndex.js".'
+}];
 
 // TODO: Create an array of questions for user input
 const questions = () => {
     console.log('Start prompt.');
-
-    const readmeData = [];
 
     return inquirer
         .prompt([{
@@ -61,16 +73,9 @@ const questions = () => {
                 message: 'Please enter the link to your project repository:'
             },
             {
-                type: 'confirm',
-                name: 'confirmDescription',
-                message: 'Would you like to add a description?',
-                default: true
-            },
-            {
                 type: 'input',
                 name: 'description',
-                message: 'Enter a description of your application:',
-                when: ({ confirmDescription }) => confirmDescription
+                message: 'Enter a description of your application:'
             },
             {
                 type: 'input',
@@ -83,22 +88,23 @@ const questions = () => {
                 message: 'Please enter usage information:'
             },
             {
+                type: 'confirm',
+                message: 'Would you like to select a license?',
+                name: 'confirmLicense',
+                default: true
+            },
+            {
                 type: 'list',
                 name: 'license',
                 message: 'Which type of license would you like to use?',
-                choices: ['MIT', 'GNU', 'Mozilla Public License', 'No license']
-            },
-            {
-                type: 'confirm',
-                name: 'confirmContribution',
-                message: 'Would you like to add instructions for contributions?',
-                default: false
-            },
-            {
-                type: 'input',
-                name: 'contribution',
-                message: 'Please enter instructions:',
-                when: ({ confirmContribution }) => confirmContribution
+                choices: ['MIT', 'GNU', 'Mozilla Public License', 'No license'],
+                when: ({ confirmLicense }) => {
+                    if (confirmLicense) {
+                        return true
+                    } else {
+                        return false
+                    }
+                }
             },
             {
                 type: 'input',
@@ -114,8 +120,7 @@ const questions = () => {
                 }
             }
         ])
-        .then(responses => {
-            readmeData.push(responses);
+        .then(readmeData => {
             return readmeData;
         });
 };
@@ -133,6 +138,11 @@ const writeToFile = (fileName, data) => {
 // Function call to initialize app
 questions()
     .then(readmeData => {
-        console.log('responses', readmeData);
+        // console.log('responses', readmeData);
         return generateMarkdown(readmeData);
-    });
+    })
+    .then(markdownFile => {
+        console.log('markdown file: ', markdownFile);
+        writeToFile(markdownFile);
+    })
+    .catch(err => console.log('Error', err));
