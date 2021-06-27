@@ -70,7 +70,7 @@ const questions = () => {
             {
                 type: 'input',
                 name: 'repository',
-                message: 'Please enter the link to your project repository:'
+                message: 'Please enter the name of your project repository:'
             },
             {
                 type: 'input',

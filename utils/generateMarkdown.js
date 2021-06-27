@@ -70,8 +70,8 @@ const generateMarkdown = (readmeData) => {
     \n## Questions
     \nPlease direct all questions to Jamie Vesterfelt:
     \nEmail: ${readmeData.email}
-    \nGitHub: ${readmeData.username}
-    \nRepository: ${readmeData.repository}
+    \nGitHub: https://github.com/${readmeData.username}
+    \nRepository: https://github.com/${readmeData.username}/${readmeData.repository}
 
     
     \nCopyright (c) 2021 ${readmeData.name}\n
