@@ -7,8 +7,6 @@ const generateMarkdown = require('./utils/generateMarkdown');
 const questions = () => {
     console.log('Start prompt.');
 
-    const readmeData = [];
-
     return inquirer
         .prompt([{
                 type: 'input',
@@ -60,16 +58,9 @@ const questions = () => {
                 message: 'Please enter the link to your project repository:'
             },
             {
-                type: 'confirm',
-                name: 'confirmDescription',
-                message: 'Would you like to add a description?',
-                default: true
-            },
-            {
                 type: 'input',
                 name: 'description',
-                message: 'Enter a description of your application:',
-                when: ({ confirmDescription }) => confirmDescription
+                message: 'Enter a description of your application:'
             },
             {
                 type: 'input',
@@ -82,22 +73,23 @@ const questions = () => {
                 message: 'Please enter usage information:'
             },
             {
+                type: 'confirm',
+                message: 'Would you like to select a license?',
+                name: 'confirmLicense',
+                default: true
+            },
+            {
                 type: 'list',
                 name: 'license',
                 message: 'Which type of license would you like to use?',
-                choices: ['MIT', 'GNU', 'Mozilla Public License', 'No license']
-            },
-            {
-                type: 'confirm',
-                name: 'confirmContribution',
-                message: 'Would you like to add instructions for contributions?',
-                default: false
-            },
-            {
-                type: 'input',
-                name: 'contribution',
-                message: 'Please enter instructions:',
-                when: ({ confirmContribution }) => confirmContribution
+                choices: ['MIT', 'GNU', 'Mozilla Public License', 'No license'],
+                when: ({ confirmLicense }) => {
+                    if (confirmLicense) {
+                        return true
+                    } else {
+                        return false
+                    }
+                }
             },
             {
                 type: 'input',
@@ -113,8 +105,7 @@ const questions = () => {
                 }
             }
         ])
-        .then(responses => {
-            readmeData.push(responses);
+        .then(readmeData => {
             return readmeData;
         });
 };
@@ -132,7 +123,7 @@ const writeToFile = (fileName, data) => {
 // Function call to initialize app
 questions()
     .then(readmeData => {
-        console.log('responses', readmeData);
+        // console.log('responses', readmeData);
         return generateMarkdown(readmeData);
     })
     .then(markdownFile => {
