@@ -10,17 +10,17 @@ const renderLicenseBadge = (license) => {
         switch (license) {
             case 'MIT':
                 badgeUrl = `![License Badge](https://img.shields.io/badge/license-MIT-brightgreen)`;
-                licenseLink = `[MIT](https://choosealicense.com/licenses/mit/)`;
+                licenseLink = `[MIT license details](https://choosealicense.com/licenses/mit/)`;
                 break;
 
             case 'GNU':
                 badgeUrl = `![License Badge](https://img.shields.io/badge/license-GNU-brightgreen)`;
-                licenseLink = `[GNU](https://choosealicense.com/licenses/gpl-3.0/)`;
+                licenseLink = `[GNU license details](https://choosealicense.com/licenses/gpl-3.0/)`;
                 break;
 
             case 'Mozilla Public License':
                 badgeUrl = `![License Badge](https://img.shields.io/badge/license-Mozilla%20Public%20License%202.0-brightgreen)`;
-                licenseLink = `[Mozilla Public License](https://choosealicense.com/licenses/mpl-2.0/)`;
+                licenseLink = `[Mozilla Public License license details](https://choosealicense.com/licenses/mpl-2.0/)`;
                 break;
 
             case 'No license':
@@ -67,7 +67,11 @@ const generateMarkdown = (readmeData) => {
     \n${renderLicenseBadge(readmeData.license)}
     \n## Contributing\nBefore contributing to this project please review the Contributor Covenant Code of Conduct:\n[Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct/code_of_conduct.md)
     \n## Testing\n${readmeData.testing}
-    \n## Questions\nPlease direct all questions to Jamie Vesterfelt:\nEmail: ${readmeData.email}\nGitHub: ${readmeData.username}\nRepository: ${readmeData.repository}
+    \n## Questions
+    \nPlease direct all questions to Jamie Vesterfelt:
+    \nEmail: ${readmeData.email}
+    \nGitHub: ${readmeData.username}
+    \nRepository: ${readmeData.repository}
 
     \nCopyright (c) 2021 ${readmeData.name}\n
 `;

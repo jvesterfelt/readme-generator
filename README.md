@@ -25,7 +25,7 @@ Run the application from the root directory of the source files using "node inde
 ## License
 ![License Badge](https://img.shields.io/badge/license-MIT-brightgreen)
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT license details](https://choosealicense.com/licenses/mit/)
     
 ## Contributing
 Before contributing to this project please review the Contributor Covenant Code of Conduct:
@@ -35,9 +35,13 @@ Before contributing to this project please review the Contributor Covenant Code 
 There is a second file created called testIndex.js. Run this file using "node testIndex.js" and a sample of the README.md file will be logged to the console.
     
 ## Questions
+    
 Please direct all questions to Jamie Vesterfelt:
+    
 Email: jamievesterfelt@hotmail.com
+    
 GitHub: jvesterfelt
+    
 Repository: https://github.com/jvesterfelt/readme-generator
 
     
