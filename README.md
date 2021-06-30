@@ -21,6 +21,9 @@ Run the application from the root directory of the source files using "node inde
 #### Usage Screenshots:
 ![Prompt Questions](./assets/images/prompt.jpg)
     
+#### Walkthrough video: 
+![Walkthrough Video](./assets/videos/readme-generator-demo.webm)
+    
 
 ## License
 ![License Badge](https://img.shields.io/badge/license-MIT-brightgreen)

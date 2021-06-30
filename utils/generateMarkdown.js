@@ -64,6 +64,7 @@ const generateMarkdown = (readmeData) => {
     \n## Installation\n${readmeData.installation}
     \n## Usage\n${readmeData.usage}
     \n#### Usage Screenshots:\n![Prompt Questions](./assets/images/prompt.jpg)
+    \n#### Walkthrough video: \n![Walkthrough Video](./assets/videos/readme-generator-demo.webm)
     \n${renderLicenseBadge(readmeData.license)}
     \n## Contributing\nBefore contributing to this project please review the Contributor Covenant Code of Conduct:\n[Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct/code_of_conduct.md)
     \n## Testing\n${readmeData.testing}
